@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GUESS THE NUMBER</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="init()">
+	<div id="cantainer">
+		<div class="panel">
+			<h2>I have a random number <br> between 1-100</h2>
+			<h3>Dare to guess??</h3><hr>
+			<p>Select difficulty settings</p>
+			<button id="easybtn" onclick="selectEsy()" class="">Easy: Guess in 10 attempts (default)</button>
+			<button id="hardbtn" onclick="selectHrd()" class="">Hard: Guess in 05 attempts</button>
+
+
+			<button id="gameOver" onclick="newGame()">New game</button>
+		</div>
+		<div class="panel">
+			<h3 id="getNum">Enter your number below &amp; press enter</h3>
+			<input type="number" id="inputBox" onchange="compareGuess()">
+			<p>Number of previous attemps <span id="attemps">0</span></p>
+		</div>
+		<div class="panel">
+			<p>Your pervious guesses:</p>
+			<p id="guesslog"></p>
+		</div>
+		
+		<p id="guesslog"></p>
+
+
+	</div>
+
+</body>
+</html>
